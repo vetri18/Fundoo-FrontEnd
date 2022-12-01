@@ -19,7 +19,8 @@ import { MatInputModule } from '@angular/material/input';
     RegistrationComponent,
     LoginComponent,
     ResetPasswordComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+  
     
   ],
   imports: [

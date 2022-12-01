@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="header">
+            <div class="Logo-name">
+                <h1>
+                    <span style="color: blue;">F</span>
+                    <span style="color: red;">u</span>
+                    <span style="color: yellow;">n</span>
+                    <span style="color: green;">d</span>
+                    <span style="color: red;">o</span>
+                    <span style="color: blue;">o</span>
+                </h1>
+                <h2 class="heading">Log in</h2>
+                <h3 class="sub-heading">Use your Fundoo Account</h3>
+            </div>
+        </div>
+        <div class="Email">
+            <mat-form-field appearance="outline" style="width:70%">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="email">
+                <mat-error>Enter valid email</mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline" style="width:90%">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" placeholder="password">
+                <mat-error>Enter valid email</mat-error>
+            </mat-form-field>
+
+        </div>
+    </form>
+
+    <div class="suggestion">
+        <mat-hint class="hint1">Not your computer? Use Guest mode to sign in privately.</mat-hint>
+    </div>
+    <div>
+        <mat-hint class="hint2">Learn more</mat-hint>
+    </div>
+    <div>
+        <div class="route-btn">
+            <button class="account" mat-stroked-button>Create Account</button>
+            <button class="btn-next" mat-flat-button>Login</button>
+        </div>
+    </div>
+</div>

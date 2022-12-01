@@ -13,7 +13,7 @@
     </div>
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="creadentials">
-        <div class="full_name" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="20px">
+        <div class="full_name" >
           <mat-form-field appearance="outline">
             <mat-label>First Name</mat-label>
             <input matInput formControlName="firstName" placeholder="firstname">
@@ -28,7 +28,7 @@
         </div>
 
       </div>
-      <div class="username" fxLayout="column" fxLayoutAlign=" stretch">
+      <div class="username" >
 
         <mat-form-field appearance="outline" fxFlex.xs=100 style="width: 100%;">
           <mat-label>Email</mat-label>
@@ -64,7 +64,7 @@
       <div class="submit-button">
         <div class="submit-button">
           <a class="signin-link" mat-button>Sign in instead</a>
-           
+
           <button class="next-btn" mat-raised-button>Submit</button>
         </div>
 
