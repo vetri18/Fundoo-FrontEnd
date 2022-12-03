@@ -21,7 +21,9 @@ export class ResetPasswordComponent {
       });
   }
   get f() { return this.resetPasswordForm.controls; }
-  onSubmit() { }
+  onSubmit() {
+    
+   }
 
 
 }
