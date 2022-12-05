@@ -13,6 +13,12 @@ import { ForgetPasswordComponent } from './component/forget-password/forget-pass
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { CreateNoteComponent } from './component/create-note/create-note.component';
+import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
+import { DisplayNoteComponent } from './component/display-note/display-note.component';
+import { IconCompComponent } from './component/icon-comp/icon-comp.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,11 @@ import { MatInputModule } from '@angular/material/input';
     LoginComponent,
     ResetPasswordComponent,
     ForgetPasswordComponent,
+    DashboardComponent,
+    CreateNoteComponent,
+    GetAllNotesComponent,
+    DisplayNoteComponent,
+    IconCompComponent,
   
     
   ],
@@ -32,7 +43,8 @@ import { MatInputModule } from '@angular/material/input';
     MatCheckboxModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
