@@ -19,6 +19,11 @@ import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.co
 import { DisplayNoteComponent } from './component/display-note/display-note.component';
 import { IconCompComponent } from './component/icon-comp/icon-comp.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule ,
+    MatSidenavModule ,
+    MatListModule ,
+    MatIconModule ,
+    FlexLayoutModule ,
+    
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
