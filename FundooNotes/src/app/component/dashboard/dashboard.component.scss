@@ -7,6 +7,9 @@
   left: 0;
   right: 0;
 }
+.example-toolbar {
+  display: flex;
+}
 
 .keepimage{
   margin-left: 1%;
@@ -48,7 +51,7 @@ input.nosubmit {
   flex: 1;
   height: 550px;
   overflow-y: hidden;
-  display: flex;
+;
   
 }
 .hide{
@@ -61,6 +64,7 @@ input.nosubmit {
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
+
 .sidenavimage{
 
   margin-left: 2%;

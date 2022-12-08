@@ -1,1 +1,44 @@
-<p>icon-comp works!</p>
+<div class="OuterDiv">
+
+
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/ghnti.png">
+    </div>
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/collab.png">
+    </div>
+
+    <div role="button" class="add">
+
+
+        <div role="button" class="add" [matMenuTriggerFor]="colormenu">
+            <img class="divImg" src="../../../assets/ColourPalete.png">
+            <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
+                <div  fxLayout="row wrap" fxLayoutAlign="start center">
+                        <button class="color" mat-mini-fab 
+                             ></button>
+                </div>
+            </mat-menu>
+        </div>
+    </div>
+    <div role="button" class="add">
+        <img class="divImg" src="../../../assets/imgs.png">
+    </div>
+    <div role="button" class="add" >
+        <img class="divImg" src="../../../assets/archive.png" >
+    </div>
+  
+    <div role="button" class="add">
+     <div class="MoreItem" mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
+            <img class="divImg" src="../../../assets/more.png">
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="matmenuBtn" >Delete note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>copy to google Docs</button>
+            </mat-menu>
+        </div>
+    </div>
+</div>    

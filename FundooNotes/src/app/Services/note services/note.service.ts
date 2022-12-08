@@ -12,6 +12,7 @@ export class NoteService {
    }
 
    addnote(payload: any){
+    this.token=localStorage.getItem('token')
     console.log("inside note service",payload);
     console.log(this.token)
 
@@ -22,6 +23,21 @@ export class NoteService {
       })
     }
     return this.http.postservice('/Notes/Add',payload,true,header)
+
+  }
+  getall(){
+    this.token=localStorage.getItem('token')
+    console.log(this.token)
+
+
+
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+       'Authorization': 'Bearer ' +this.token
+      })
+    }
+    return this.http.getservice(`/Notes/GetAllNote`,true,header)
 
   }
 

@@ -37,6 +37,9 @@ export class CreateNoteComponent {
       console.log(payload)
       this.note.addnote(payload).subscribe((response:any) =>{
         console.log("addnote succesfully", response)
+        localStorage.getItem('token')
+
+
       })
      
     }
