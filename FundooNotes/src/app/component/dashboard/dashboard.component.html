@@ -12,52 +12,46 @@
             <input class="nosubmit" type="search" placeholder="Search...">
         </div>
         <div class="cyDiv">
+
             <div>
-                <img type="image" src="../../../assets/Refresh.png" height="26px" width="26px">
+                <img type="image" src="../../../assets/Refresh.png" height="26px"
+                    width="26px">
             </div>
             <div>
-                <img type="image" src="../../../assets/view.png" height="26px" width="26px">
+                <img type="image" src="../../../assets/view.png" height="26px"
+                    width="26px">
             </div>
             <div>
-                <img type="image" src="../../../assets/settings.png" height="26px" width="26px">
+                <img type="image" src="../../../assets/settings.png" height="26px"
+                    width="26px">
             </div>
         </div>
         <div class="appimage">
             <img type="image" src="../../../assets/apps.png" height="30px" width="30px">
-
-            <img type="image" src="../../../assets/account_circle.png" height="28px" width="28px" class="upper-icon"
-                [matMenuTriggerFor]="menu">
+            <img type="image" src="../../../assets/account_circle.png" height="28px"
+                width="28px" class="upper-icon">
             <mat-menu #menu>
                 <button mat-menu-item>Logout</button>
             </mat-menu>
         </div>
-
     </mat-toolbar>
+
     <div class="menu" fxLayout="row" fxLayoutGap="20px">
         <div class="note1" fxLayout="column" fxLayoutGap="20px">
-            
-            <div>
-                <img type="image" src="../../../assets/bulb.png" height="29px" width="29px">
-            </div>
-            <div>
-                <img type="image" src="../../../assets/ghnti.png" height="24px" width="24px">
-            </div>
-            <div>
-                <img type="image" src="../../../assets/editLabel.png" height="24px" width="24px">
-            </div>
-            <div>
-                <img type="image" src="../../../assets/archive.png" height="24px" width="24px">
-            </div>
+            <img type="image" src="../../../assets/bulb.png" height="28px" width="28px">
 
-            <div>
-                <img type="image" src="../../../assets/delete_forever.png" height="24px" width="24px">
-            </div>
+            <img type="image" src="../../../assets/ghnti.png" height="28px"
+                width="28px">
 
+            <img type="image" src="../../../assets/editLabel.png" height="28px" width="28px">
 
+            <img type="image" src="../../../assets/archive.png" height="28px" width="28px">
 
-
+            <img type="image" src="../../../assets/delete_forever.png" height="28px"
+                width="28px">
         </div>
         <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+           
             <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
                 fixedTopGap="56">
                 <mat-nav-list>
@@ -73,8 +67,8 @@
             <mat-sidenav-content>
                 <router-outlet></router-outlet>
             </mat-sidenav-content>
-
-
         </mat-sidenav-container>
+       
     </div>
 </div>
+

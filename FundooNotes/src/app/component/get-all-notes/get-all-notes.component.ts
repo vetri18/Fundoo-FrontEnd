@@ -16,12 +16,15 @@ export class GetAllNotesComponent {
   getallnotes() {
     this.note.getall().subscribe((request: any) => {
       console.log("request data", request)
-      this.noteArray = request
+      this.noteArray = request.data
       console.log("request data", this.noteArray)
 
       })
     
   }
+ 
+  
+  
 
 }
 
