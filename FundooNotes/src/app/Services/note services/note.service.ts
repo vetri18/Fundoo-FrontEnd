@@ -44,7 +44,6 @@ export class NoteService {
   trashnote(req:any){
     console.log(req)
     let header={
-
       headers:new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' +this.token
@@ -52,6 +51,18 @@ export class NoteService {
       })
     }
     return this.http.putservice(`/Notes/Trash?noteid=${req.noteID}`,req,true,header)
+  }
+  Archive(req:any){
+    console.log(req)
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putservice(`/Notes/Archive?noteid=${req.noteID}`,req,true,header)
+
   }
 
   
