@@ -3,11 +3,11 @@
         <div appearance="fill" class="discard">
             <mat-card class="card" >
                 <img class="pin" src="../../../assets/pin.png">
-                <mat-card-title >
+                <mat-card-title (click)="openDialog(note)" >
                     {{note.title}}
                 </mat-card-title>
                 <mat-card-content>
-                    <p>{{note.note}}</p>
+                    <p (click)="openDialog(note)"> {{note.note}}</p>
                 </mat-card-content>
                 <div class="icondiv" FxLayoutAlign="space-between centre">
                     <app-icon-comp  [notecard]="note"></app-icon-comp>
