@@ -30,6 +30,7 @@ import { UpdatenoteComponent } from './component/updatenote/updatenote.component
 import { FormsModule } from '@angular/forms';
 import { TrashComponent } from './component/trash/trash.component';
 import { ArchiveComponent } from './component/archive/archive.component';
+import { AuthguradServiceService } from './Services/authgurad-service.service';
 
 
 @NgModule({
@@ -73,7 +74,9 @@ import { ArchiveComponent } from './component/archive/archive.component';
     
     
   ],
-  providers: [],
+  providers: [
+    AuthguradServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
