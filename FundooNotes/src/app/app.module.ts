@@ -28,6 +28,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import { UpdatenoteComponent } from './component/updatenote/updatenote.component';
 import { FormsModule } from '@angular/forms';
+import { TrashComponent } from './component/trash/trash.component';
+import { ArchiveComponent } from './component/archive/archive.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { FormsModule } from '@angular/forms';
     GetAllNotesComponent,
     DisplayNoteComponent,
     IconCompComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
+    TrashComponent,
+    ArchiveComponent
   
     
   ],

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArchiveComponent } from './component/archive/archive.component';
 import { CreateNoteComponent } from './component/create-note/create-note.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
@@ -7,6 +8,7 @@ import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.co
 import { LoginComponent } from './component/login/login.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
+import { TrashComponent } from './component/trash/trash.component';
 
 const routes: Routes = [
   {path : 'register' , component:RegistrationComponent},
@@ -15,7 +17,10 @@ const routes: Routes = [
   {path: 'reset' , component:ResetPasswordComponent},
   {path: 'dashboard', component:DashboardComponent ,
 children:[
-  {path:'note',component:GetAllNotesComponent}
+  {path:'note',component:GetAllNotesComponent},
+  {path:'trash', component:TrashComponent},
+  {path:'archiv',component:ArchiveComponent},
+
 ]},
   {path: 'create', component:CreateNoteComponent},
 
