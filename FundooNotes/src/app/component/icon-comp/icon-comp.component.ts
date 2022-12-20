@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NoteService } from 'src/app/Services/note services/note.service';
 
 @Component({
@@ -8,7 +8,13 @@ import { NoteService } from 'src/app/Services/note services/note.service';
 })
 export class IconCompComponent {
   @Input() notecard:any;
-  
+  @Output() displaytoIcons = new EventEmitter<string>()
+  data:any;
+ 
+
+ isArchive=false;
+
+ 
   
   
 
@@ -23,6 +29,7 @@ export class IconCompComponent {
   console.log(req)
   this.note.trashnote(req).subscribe((response: any) => {
     console.log(response);
+    this.displaytoIcons.emit(response);
     
   })
  }
@@ -34,9 +41,44 @@ export class IconCompComponent {
   console.log(req)
   this.note.Archive(req).subscribe((response:any)=>{
     console.log(response)
+    this.displaytoIcons.emit(response);
   
   })
  } 
+ ngOnInit(): void {
+   
+
+  
+  
+ }
+ colors: Array<any>=[
+   {code:'#fff',name:"white"},
+   {code:'#f28b82',name:"red"},
+   {code:'#fbbc04',name:"orange"},
+   {code:'#ffff00',name:"yellow"},
+   {code:'#ccff90',name:"green"},
+   {code:'#a7ffeb',name:"teal"},
+   {code:'#cbf0f8',name:"blue"},
+   {code:'#aecbfa',name:"darkblue"},
+   {code:'#d7aefb',name:"purple"},
+   {code:'#e6c9a8',name:"brown"},
+   
+
+ ]
+ setcolor(color:any){
+   console.log('color', color);
+   console.log(this.notecard);
+   this.notecard.color=color;
+   let data={
+     color:color,
+   NotesId:[this.notecard.noteID],
+   }
+   console.log(data);
+   this.note.changecColor(data).subscribe((response:any)=>{
+     console.log(response);
+
+   })
+ }
   
 
 }

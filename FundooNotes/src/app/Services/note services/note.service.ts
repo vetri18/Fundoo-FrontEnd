@@ -75,6 +75,19 @@ export class NoteService {
     }
     return this.http.putservice(`/Notes/Update?noteid=${data.noteId}`,data,true,header)
   }
+  changecColor(data:any){
+    console.log(data)
+    let header={
+
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putservice(`/Notes/Color?NoteId=${data.NotesId}&color=${data.color}`,data,true,header)   
+
+  }
 
   
 }

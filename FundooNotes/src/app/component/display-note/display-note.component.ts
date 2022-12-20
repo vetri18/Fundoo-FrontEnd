@@ -11,6 +11,7 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 })
 export class DisplayNoteComponent {
   @Input() NoteList:any;
+  @Output() displaytoGetAllNotes = new EventEmitter<string>();
 
   msg: any;
 
@@ -30,6 +31,11 @@ export class DisplayNoteComponent {
     })
 
   
+  }
+  receiveMsgIconsToDisplay($event:any){
+    console.log("msg icon to display",$event)
+    this.msg = $event;
+    this.displaytoGetAllNotes.emit(this.msg);
   }
   
    

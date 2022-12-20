@@ -1,2 +1,2 @@
-<app-create-note></app-create-note>
-<app-display-note [NoteList] = "noteArray"></app-display-note>
+<app-create-note (displaytoCreateNote)="receiveMsgfromDisplay($event)"></app-create-note>
+<app-display-note [NoteList] = "noteArray" (displaytoGetAllNotes)="receiveMsgfromDisplay($event)"></app-display-note>

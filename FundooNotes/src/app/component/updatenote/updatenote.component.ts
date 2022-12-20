@@ -9,9 +9,9 @@ import { NoteService } from 'src/app/Services/note services/note.service';
 })
 export class UpdatenoteComponent {
   title: any;
-  
   id: any;
   description: any;
+  color: any;
 
 
   constructor(private note: NoteService,
@@ -20,6 +20,7 @@ export class UpdatenoteComponent {
     this.title = data.title;
       this.description = data.note;
       this.id = data.noteID;
+      this.color = data.color
   }
   onNoClick(): void {
     this.dialogRef.close();
