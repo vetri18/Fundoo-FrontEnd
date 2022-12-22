@@ -42,7 +42,7 @@ input.nosubmit {
 .cyDiv{
   display:flex;
   flex-direction: row;
-  margin-left : 18%;
+  margin-left : 20%;
  // margin-top: -1%;
 }
 .example-sidenav-container {
@@ -72,7 +72,7 @@ input.nosubmit {
 }
 .note1{
 
-margin-top: 2%;
+margin-top: 1.5%;
 
 }
 .example-is-mobile .example-toolbar {
@@ -122,4 +122,10 @@ margin-top: 2%;
   width: 510px;
   margin: 0px;
   cursor: pointer;
+}
+mat-list-item:hover
+{
+    background-color: #FEEFC3 !important;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
 }

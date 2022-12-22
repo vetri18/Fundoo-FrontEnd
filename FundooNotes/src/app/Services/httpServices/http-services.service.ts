@@ -24,8 +24,8 @@ export class HttpServicesService {
 
   }
 
-  deleteservice(){
-
+  deleteService(url:string, token: boolean = false, httpOptions: any = {}){
+    return this.httpclient.delete(this.baseurl+url, token && httpOptions)
   }
   patchservice(){
 

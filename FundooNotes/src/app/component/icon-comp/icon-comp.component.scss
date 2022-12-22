@@ -57,3 +57,17 @@
     background-color: transparent;
     cursor: pointer;
 }
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin: 0px;
+}
+.hello{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    margin: 1px;
+    width: 25px;
+    height: 25px;
+}

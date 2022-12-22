@@ -1,5 +1,5 @@
 <div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 2%; padding-left: 10%;">
-    <div class="notes"  *ngFor="let note of NoteList">
+    <div class="notes"  *ngFor="let note of NoteList | search : searchWord"    >
         <div appearance="fill" class="discard">
             <mat-card class="card"  [style.background]="note.color">
                 <img class="pin" src="../../../assets/pin.png">
